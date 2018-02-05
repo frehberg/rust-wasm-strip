@@ -1,0 +1,16 @@
+[package]
+name = "transform"
+version = "0.1.0"
+authors = ["Frank Rehberger <frehberg@gmail.com>"]
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[profile.release]
+lto = true
+panic = 'abort'
+
+
