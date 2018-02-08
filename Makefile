@@ -30,9 +30,8 @@ wasm:
 	wasm-gc  $(WASM_FILE)
 	. $(EMSDK_HOME)/emsdk_env.sh; $(BINARYEN_HOME)/bin/wasm-opt  $(WASM_FILE)
 	wasm-gc  $(WASM_FILE)
-	. $(EMSDK_HOME)/emsdk_env.sh; $(BINARYEN_HOME)/bin/wasm-opt  $(WASM_FILE)
 
-wast: 
+wast: wasm
 	. $(EMSDK_HOME)/emsdk_env.sh; $(BINARYEN_HOME)/bin/wasm-dis $(WASM_FILE) > $(WAST_FILE)
 
 clean:

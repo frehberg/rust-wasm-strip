@@ -12,5 +12,6 @@ crate-type = ["cdylib"]
 [profile.release]
 lto = true
 panic = 'abort'
+# opt-level = 'z'
 
 
